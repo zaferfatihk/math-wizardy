@@ -4,7 +4,7 @@ import { translate } from '../utils/translate'
 
 export default function Header() {
   return (
-    <header className="bg-white shadow-md bg-cover" style={{ backgroundImage: "url('/headline.svg')", backgroundPosition: "center 20%", margin: 0, padding: 0 }}>
+    <header className="sticky top-0 bg-white shadow-md bg-cover" style={{ backgroundImage: "url('/headline.svg')", backgroundPosition: "center 20%", margin: 0, padding: 0 }}>
       <div className="container mx-auto px-4 py-2 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-8">
           <Image src="/logo.svg" alt={translate('siteName')} width={200} height={200} />
