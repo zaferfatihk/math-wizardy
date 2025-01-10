@@ -1,0 +1,110 @@
+{
+  "siteName": "Maths Magic",
+  "siteDescription": "Fun math puzzles for kids aged 3-6",
+  "nav": {
+    "puzzles": "Puzzles",
+    "membership": "Membership",
+    "login": "Login"
+  },
+  "home": {
+    "hero": {
+      "title": "Welcome to MathMagic Kids!",
+      "subtitle": "Fun math puzzles for little geniuses aged 3-6"
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "steps": [
+        {
+          "title": "Solve Puzzles",
+          "description": "Engage with colorful and interactive math puzzles designed for young minds"
+        },
+        {
+          "title": "Earn Points",
+          "description": "Accumulate points as you solve puzzles and learn new math concepts"
+        },
+        {
+          "title": "Unlock New Challenges",
+          "description": "Use your points to unlock exciting new puzzles and grow your math skills"
+        }
+      ]
+    },
+    "plans": {
+      "title": "Choose Your Adventure",
+      "free": {
+        "title": "Free Explorer",
+        "features": [
+          "Access to basic puzzles",
+          "Earn points",
+          "Unlock some new puzzles"
+        ],
+        "cta": "Start for Free"
+      },
+      "paid": {
+        "title": "Math Wizard",
+        "price": "$10/month",
+        "features": [
+          "All Free Explorer features",
+          "Access to all premium puzzles",
+          "Faster point accumulation",
+          "Ad-free experience"
+        ],
+        "cta": "Become a Wizard"
+      }
+    },
+    "cta": {
+      "title": "Ready to Start the Math Adventure?",
+      "signUp": "Sign Up Now",
+      "tryDemo": "Try a Demo Puzzle"
+    }
+  },
+  "membership": {
+    "title": "Become a Math Wizard!",
+    "plan": {
+      "title": "Math Wizard Membership",
+      "price": "$10/month",
+      "features": [
+        "Access to all premium puzzles",
+        "Faster point accumulation",
+        "Ad-free experience",
+        "Support your child's math education"
+      ],
+      "cta": "Subscribe Now"
+    }
+  },
+  "signup": {
+    "title": "Sign Up for MathMagic Kids",
+    "fields": {
+      "email": "Email",
+      "name": "Name",
+      "surname": "Surname",
+      "age": "Age",
+      "gender": "Gender"
+    },
+    "genders": {
+      "female": "Female",
+      "male": "Male",
+      "other": "Other"
+    },
+    "cta": "Sign Up",
+    "googleCta": "Sign Up with Google"
+  },
+  "puzzles": {
+    "title": "Puzzles",
+    "yourPoints": "Your Points: {{points}}",
+    "samplePuzzle": {
+      "title": "Count the Apples",
+      "question": "How many apples do you see?",
+      "answer": "5 Apples"
+    },
+    "unlockMessage": "You need {{points}} more points to unlock this puzzle!"
+  },
+  "footer": {
+    "copyright": "© 2023 MathMagic Kids. All rights reserved.",
+    "links": {
+      "about": "About",
+      "contact": "Contact",
+      "privacy": "Privacy Policy"
+    }
+  }
+}
+
