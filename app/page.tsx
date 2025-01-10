@@ -5,8 +5,8 @@ import { translate } from './utils/translate'
 
 export default function Home() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <section className="text-center mb-16 bg-cover bg-center" style={{ backgroundImage: "url('/hero-image.svg')" }}>
+    <div className="container mx-auto px-0 py-0">
+      <section className="w-full text-center mb-16 bg-cover bg-center" style={{ backgroundImage: "url('/hero-image.svg')", backgroundPosition: "center 30%" }}>
         {/* <h1 className="text-4xl font-bold text-purple-700 mb-4">{translate('home.hero.title')}</h1>
         <p className="text-xl text-blue-600 mb-8">{translate('home.hero.subtitle')}</p> */}
         <div className="h-96"></div> {/* Adjust height as needed */}
