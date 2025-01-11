@@ -54,7 +54,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="text-center">
+      {/* <section className="text-center">
         <h2 className="text-3xl font-bold text-purple-700 mb-4">{translate('home.cta.title')}</h2>
         <Button asChild size="lg" className="mr-4">
           <Link href="/signup">{translate('home.cta.signUp')}</Link>
@@ -62,7 +62,7 @@ export default function Home() {
         <Button asChild size="lg" variant="outline">
           <Link href="/puzzles">{translate('home.cta.tryDemo')}</Link>
         </Button>
-      </section>
+      </section> */}
     </div>
   )
 }

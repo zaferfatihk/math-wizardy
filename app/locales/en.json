@@ -34,18 +34,18 @@
         "title": "Free Explorer",
         "features": [
           "Access to basic puzzles",
-          "Earn points",
-          "Unlock some new puzzles"
+          "Unlock new puzzles",
+          "Learn Maths in a fun way",
+          "Spend time on best educational app"
         ],
         "cta": "Start for Free"
       },
       "paid": {
         "title": "Math Wizard",
-        "price": "$10/month",
+        "price": "$10 / Annually",
         "features": [
           "All Free Explorer features",
-          "Access to all premium puzzles",
-          "Faster point accumulation",
+          "Access to premium puzzles",
           "Ad-free experience"
         ],
         "cta": "Become a Wizard"
