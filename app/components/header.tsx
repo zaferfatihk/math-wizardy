@@ -13,9 +13,9 @@ export default function Header() {
         </Link>
         <nav>
           <ul className="flex space-x-4">
-            <li><Link href="/puzzles" className="text-white-700 font-bold hover:text-white">{translate('nav.puzzles')}</Link></li>
-            <li><Link href="/membership" className="text-white-700 font-bold hover:text-white">{translate('nav.membership')}</Link></li>
-            <li><Link href="/login" className="text-white-700 font-bold hover:text-white">{translate('nav.login')}</Link></li>
+            <li><Link href="/puzzles" className="text-white font-bold hover:text-white">{translate('nav.puzzles')}</Link></li>
+            <li><Link href="/membership" className="text-white font-bold hover:text-white">{translate('nav.membership')}</Link></li>
+            <li><Link href="/login" className="text-white font-bold hover:text-white">{translate('nav.login')}</Link></li>
           </ul>
         </nav>
       </div>
