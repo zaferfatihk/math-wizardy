@@ -105,6 +105,10 @@
       "contact": "Contact",
       "privacy": "Privacy Policy"
     }
+  },
+  "login": {
+    "title": "Welcome to Kids Math Puzzles",
+    "introText": "Please log in to continue"
   }
 }
 
