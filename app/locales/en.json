@@ -73,7 +73,7 @@
     }
   },
   "logout": {
-    "title": "You have been logged out",
+    "title": "You have been logged out !",
     "message": "Log In Again"
   },
   "signup": {
@@ -104,7 +104,7 @@
     "unlockMessage": "You need {{points}} more points to unlock this puzzle!"
   },
   "footer": {
-    "copyright": "© 2023 MathMagic Kids. All rights reserved.",
+    "copyright": "© 2023 Arnie's Math Lab. All rights reserved.",
     "links": {
       "about": "About",
       "contact": "Contact",
@@ -119,6 +119,16 @@
       "password": "Password"
     },
     "welcome": "Welcome back, {name}!"
+  },
+  "privacy": {
+    "title": "Privacy Policy"
+  },
+  "contact": {
+    "title": "Contact Information"
+  },
+  "about": {
+    "head": "About Website",
+    "body": "Founder"
   }
 }
 

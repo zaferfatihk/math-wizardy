@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import { translate } from '../utils/translate'
 

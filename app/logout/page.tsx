@@ -13,8 +13,10 @@ export default function LogoutPage() {
     }, [router]);
 
     return (
-        <div className="container max-sm:mx-auto px-4 py-8">
-            <h1 className="text-3xl font-bold text-center text-purple-700 mb-8">{translate('logout.title')}</h1>
+        <div className="flex justify-center pt-8 sm:pt-12 md:pt-16 lg:pt-20">
+            <h1 className="text-xl font-bold text-center text-black-300 mb-8">
+            {translate('logout.title')}
+            </h1>
         </div>
     );
 };
