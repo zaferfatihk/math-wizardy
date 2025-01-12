@@ -36,7 +36,7 @@ export default function Home() {
               ))}
             </ul>
             <Button asChild>
-              <Link href="/signup">{translate('home.plans.free.cta')}</Link>
+              <Link href="/puzzles">{translate('home.plans.free.cta')}</Link>
             </Button>
           </div>
           <div className="bg-white rounded-lg shadow-md p-6 text-center border-4 border-yellow-400">
