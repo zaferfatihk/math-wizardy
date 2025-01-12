@@ -4,7 +4,8 @@
   "nav": {
     "puzzles": "Puzzles",
     "membership": "Membership",
-    "login": "Login"
+    "login": "Login",
+    "logout": "Logout"
   },
   "home": {
     "hero": {
@@ -108,7 +109,12 @@
   },
   "login": {
     "title": "Welcome to Kids Math Puzzles",
-    "introText": "Please log in to continue"
+    "introText": "Please log in to continue",
+    "fields": {
+      "email": "Email",
+      "password": "Password"
+    },
+    "welcome": "Welcome back, {name}!"
   }
 }
 
