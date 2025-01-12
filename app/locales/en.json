@@ -72,6 +72,10 @@
       "cta": "Subscribe Now"
     }
   },
+  "logout": {
+    "title": "You have been logged out",
+    "message": "Log In Again"
+  },
   "signup": {
     "title": "Sign Up for MathMagic Kids",
     "fields": {
