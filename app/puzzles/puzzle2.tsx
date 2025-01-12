@@ -49,9 +49,9 @@ const Puzzle2 = () => {
     const alertBox = document.createElement('div');
     alertBox.className = `fixed top-0 left-0 w-full p-4 ${bgColor} text-white text-center z-50`;
     alertBox.innerHTML = `
-    <strong class="block text-xl mb-1">${title}</strong>
-    <span class="block mb-1" style="color: black">${message}</span>
-    <span class="block text-3xl" style="color: black">${bgColor === "bg-green-500" ? "🏆" : "🦆"}</span> <!-- Cup Winner emoji for success, Duck emoji for failure -->`;
+      <strong class="block text-xl mb-1">${title}</strong>
+      <span class="block mb-1" style="color: black">${message}</span>
+      <span class="block text-3xl" style="color: black">${bgColor === "bg-green-500" ? "🏆" : "🦆"}</span> <!-- Cup Winner emoji for success, Duck emoji for failure -->`;
     document.body.appendChild(alertBox);
     setTimeout(() => {
       alertBox.remove();
