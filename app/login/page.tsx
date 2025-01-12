@@ -9,14 +9,15 @@ import { translate, translateWithInput } from '../utils/translate'
 export default function LoginPage() {
     const [givenName, setGivenName] = useState<string | null | undefined>(undefined);
     const [firstName, setFirstName] = useState<string | null | undefined>(undefined);
-    sessionStorage.setItem("email", "zaferfatih@gmail.com");
-    sessionStorage.setItem("firstName", "Zafer");
-    sessionStorage.setItem("givenName", "Zafer Fatih Koyuncu");
-
-    // Dispatch custom event after updating sessionStorage
-    window.dispatchEvent(new Event('sessionStorageUpdated'));
 
     useEffect(() => {
+      sessionStorage.setItem("email", "zaferfatih@gmail.com");
+      sessionStorage.setItem("firstName", "Zafer");
+      sessionStorage.setItem("givenName", "Zafer Fatih Koyuncu");
+      
+      // Dispatch custom event after updating sessionStorage
+      window.dispatchEvent(new Event('sessionStorageUpdated'));
+
       setGivenName("Zafer Fatih Koyuncu");
       setFirstName("Fatih");
       //todo: comment out the above 3 lines when going to production
