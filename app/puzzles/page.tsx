@@ -4,7 +4,14 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
-import { translate } from '../utils/translate'
+import { translate, translateWithInt } from '../utils/translate'
+
+interface Puzzle {
+  id: number;
+  title: string;
+  points: number;
+  locked: boolean;
+}
 
 const puzzles = [
   { id: 1, title: 'Count the Apples', points: 10, locked: false },
@@ -23,7 +30,8 @@ export default function PuzzlesPage() {
         puzzle.locked = false
         setUserPoints(userPoints - puzzle.points)
       } else {
-        alert(translate('puzzles.unlockMessage', { points: puzzle.points - userPoints }))
+        let remainingPoints = puzzle.points - userPoints;
+        alert(translate('puzzles.unlockMessage', remainingPoints.toString()))
         return
       }
     }
@@ -52,7 +60,7 @@ export default function PuzzlesPage() {
             </li>
           ))}
         </ul>
-        <p className="mt-4 text-blue-600">{translate('puzzles.yourPoints', { points: userPoints })}</p>
+        <p className="mt-4 text-blue-600">{translateWithInt('puzzles.yourPoints', { points: userPoints })}</p>
       </div>
       <div className="w-3/4 pl-4">
         <h2 className="text-2xl font-bold text-purple-700 mb-4">{selectedPuzzle.title}</h2>

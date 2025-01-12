@@ -19,6 +19,16 @@ export function translate(key: string, locale: string = 'en'): string {
   return value as string
 }
 
+export function translateWithInt(key: string, values?: { [key: string]: number }, locale: string = 'en'): string {  
+  let translatedValue = translate(key, locale);
+  if (values) {
+
+    Object.keys(values).forEach((key) => {
+      translatedValue = translatedValue.replace(`{${key}}`, values[key]);
+    });
+  }
+  return translatedValue;
+}
 
 export function translateWithInput(key: string, values?: { [key: string]: string }, locale: string = 'en'): string {  
   let translatedValue = translate(key, locale);

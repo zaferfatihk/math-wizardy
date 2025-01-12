@@ -95,7 +95,7 @@
   },
   "puzzles": {
     "title": "Puzzles",
-    "yourPoints": "Your Points: {{points}}",
+    "yourPoints": "Your Points: {points}",
     "samplePuzzle": {
       "title": "Count the Apples",
       "question": "How many apples do you see?",
