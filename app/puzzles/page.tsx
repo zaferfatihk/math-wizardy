@@ -5,11 +5,13 @@ import dynamic from 'next/dynamic';
 import { translate } from '../utils/translate';
 
 const puzzles = [
-  { id: 1, title: 'Count the Apples', component: 'puzzle1', points: 10, locked: false },
+  { id: 1, title: 'Count the Flowers', component: 'puzzle1', points: 10, locked: false },
   { id: 2, title: 'Match Shapes', component: 'puzzle2', points: 15, locked: false },
   { id: 3, title: 'Solve the Addition', component: 'puzzle3', points: 20, locked: false },
   { id: 4, title: 'Count the Stars', component: 'puzzle4', points: 25, locked: false },
   { id: 5, title: 'Count the Grapes', component: 'puzzle5', points: 30, locked: false },
+  { id: 6, title: 'Count the Stars', component: 'puzzle6', points: 30, locked: false },
+  { id: 7, title: 'Multiply the numbers', component: 'puzzle7', points: 30, locked: false },
 ];
 
 export default function PuzzlesPage() {

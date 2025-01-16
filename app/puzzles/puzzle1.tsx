@@ -1,34 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Puzzle1 = () => {
-    const [count, setCount] = useState(0);
-    const [points, setPoints] = useState(0);
-    const [answered, setAnswered] = useState(false);
+    const [clickedFlowers, setClickedFlowers] = useState<number[]>([]);
+    const [isCompleted, setIsCompleted] = useState<boolean>(false);
 
-    const handleClick = () => {
-        setCount(count + 1);
-    };
+    useEffect(() => {
+        playSound('intropuzzle1');
+    }, []);
 
-    const handleSuccess = () => {
-        if (count === 5) { // Assuming 5 apples to count
-            setPoints(points + 1);
-            setCount(0); // Reset count after success
-        }
-    };
-
-    function handleButtonClick(number: number): void {
-        if (!answered) {
-            if (number === 5) {
-                setPoints(points + 10);
-                setAnswered(true);
-                showAlert("Count the Apples!", "Right answer!", "bg-green-500");
-            } else {
-                showAlert("Count the Apples!", "Wrong answer!", "bg-red-500");
+    const handleFlowerClick = (number: number) => {
+        if (!clickedFlowers.includes(number)) {
+            setClickedFlowers([...clickedFlowers, number]);
+            playSound(number);
+            if (clickedFlowers.length + 1 === 5) {
+                setIsCompleted(true);
+                showAlert("Great job!", "You counted to 5!", "bg-green-500");
+                setTimeout(() => {
+                    playSound('accomplishpuzzle1');
+                }, 1200);
+                setTimeout(() => {
+                    playSound('cheer', 2000);
+                }, 4000);
             }
         }
-    }
+    };
 
-    function showAlert(title: string, message: string, bgColor: string): void {
+    const playSound = (number: number | string, duration?: number) => {
+        const audio = new Audio(`/sounds/${number}.mp3`);
+        audio.play();
+        if (duration) {
+            setTimeout(() => {
+                audio.pause();
+                audio.currentTime = 0;
+            }, duration);
+        }
+    };
+
+    const showAlert = (title: string, message: string, bgColor: string) => {
         const alertBox = document.createElement("div");
         alertBox.className = `fixed top-0 left-0 w-full p-4 ${bgColor} text-white text-center z-50`;
         alertBox.innerHTML = `
@@ -40,32 +48,30 @@ const Puzzle1 = () => {
         setTimeout(() => {
             alertBox.remove();
         }, 3000);
-    }
+    };
 
     return (
-        <div className="puzzle-container p-4">
-            <h1 className="text-2xl font-bold mb-4">Count the Apples!</h1>
-            <div className="apple-container flex justify-center mb-4">
-            {Array.from({ length: 5 }, (_, i) => (
-                <span key={i} className="apple-emoji text-4xl mx-1" role="img" aria-label="apple">🍎</span>
-            ))}
+        <div className="puzzle-container p-4 flex flex-col items-center justify-start absolute" style={{ top: '20%', left: '20%' }}>
+            <h1 className="text-2xl font-bold mb-4 text-center text-purple-700">Count the Flowers!</h1>
+            <p className="text-center text-lg text-gray-700 mb-8">Click on each flower, starting from 1!</p>
+            <div className="garden flex justify-around mb-8">
+                {Array.from({ length: 5 }, (_, i) => (
+                    <div
+                        key={i + 1}
+                        className={`flower text-4xl mx-2 ${clickedFlowers.includes(i + 1) ? 'text-green-500' : 'text-gray-500'}`}
+                        onClick={() => handleFlowerClick(i + 1)}
+                    >
+                        🌸 {i + 1}
+                    </div>
+                ))}
             </div>
-            <div className="button-container flex justify-center space-x-4 mb-4">
-            {[4, 5, 6].map((number) => (
-                <button
-                key={number}
-                className="count-button bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300"
-                onClick={() => handleButtonClick(number)}
-                >
-                {number}
-                </button>
-            ))}
-            </div>
-            <div className="points-container flex justify-center items-center mt-4">
-                <p className="text-lg font-semibold bg-gray-200 px-4 py-2 rounded shadow-md">
-                    Points: <span className="text-blue-500">{points}</span>
-                </p>
-            </div>
+            {isCompleted && (
+                <div className="reward-container flex justify-center items-center mt-4">
+                    <p className="text-lg font-semibold bg-gray-200 px-4 py-2 rounded shadow-md">
+                        <span className="text-blue-500">⭐ Great job! You earned a star! ⭐</span>
+                    </p>
+                </div>
+            )}
         </div>
     );
 };
